@@ -1,0 +1,59 @@
+{
+    "categorias": [
+      {
+        "id": 1,
+        "nome": "Nome",
+        "subcategorias": [
+          {
+            "id": 11,
+            "nome": "Nome do Pai"
+          },
+          {
+            "id": 12,
+            "nome": "Nome da mãe"
+          },
+          {
+            "id": 13,
+            "nome": "Nome do Aluno"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nome": "Curso",
+        "subcategorias": [
+          {
+            "id": 21,
+            "nome": "Nome do Curso"
+          },
+          {
+            "id": 22,
+            "nome": "Curso errado"
+          },
+          {
+            "id": 23,
+            "nome": "Outro curso"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "nome": "Disciplina",
+        "subcategorias": [
+          {
+            "id": 31,
+            "nome": "Nome da Disciplina"
+          },
+          {
+            "id": 32,
+            "nome": "Disciplina errada"
+          },
+          {
+            "id": 33,
+            "nome": "Outra disciplina"
+          }
+        ]
+      }
+    ]
+  }
+  
