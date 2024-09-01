@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
+import UploadForm from "@/Components/UploadForm"
+
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -33,14 +35,14 @@ export default function Home() {
   };
   return (
     <main className="flex flex-col items-center justify-center">
-      <header id="topo">
+      <header className='bg-blue-800' id="topo">
         <div id="topo_box">
           <div id="titulo">
             <header className="w-full p-4">
-              <h1 className="text-4xl text-blue-800">
+              <h1 className="text-4xl text-wihte">
                 <strong>iDocumentos App</strong>
               </h1>
-              <p className="text-lg text-blue-700 mb-4">Notifique sobre um documento incorreto</p>
+              <p className="text-lg text-white mb-4">Notifique sobre um documento incorreto</p>
             </header>
           </div>
           <section id="login bg-blue-300">
@@ -63,15 +65,21 @@ export default function Home() {
           <input type="text" id="nome" name="nome" />
           <label htmlFor="email">E-mail:</label>
           <input type="email" id="email" name="email" />
-          <label htmlFor="imagem">Arquivo do documento incorreto:</label>
-          <input type="file" id="imagem" name="imagem" />
+        </form>
+          <UploadForm/>
+        <form>
           <label htmlFor="categoria">Categoria:</label>
           <select name="categoria" id="categoria">
             <option value="1">Perguntas</option>
             <option value="2">Reclamações</option>
+            <option value="3">Nome da mãe errado</option>
+            <option value="4">Problemas de Leitura de Arquivo</option>
+            <option value="5">Problemas de Curso errado</option>
+            <option value="6">Outros</option>
           </select>
           <label htmlFor="descricao">Descrição:</label>
           <textarea id="descricao" name="descricao"></textarea>
+          <p>Eu concordo com o uso dos meus dados de acordo com a <strong>Política de Privacidade.</strong></p>
           <input type="submit" value="Enviar" className="btn_enviar" />
         </form>
       </section>
