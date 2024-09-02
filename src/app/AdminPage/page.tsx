@@ -20,9 +20,10 @@ export default function AdminPage() {
   useEffect(() => {
     const fetchDocumentos = async () => {
       try {
-        const response = await fetch("/api/documentos");
+        const response = await fetch("/api/submit-info");
         if (!response.ok) {
-          throw new Error("Erro ao buscar documentos");
+            throw new Error(`Erro: ${response.statusText}`);
+
         }
         const data: Documento[] = await response.json();
         setDocumentos(data);

@@ -1,9 +1,8 @@
 import React from 'react';
-//Condicional if 
-export function UploadForm() {
+
+export function UploadForm({ onSubmit }) {
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
 
@@ -27,16 +26,22 @@ export function UploadForm() {
       return;
     }
 
-    // Permito proceder com o envio do arquivo
-    console.log('Arquivo válido:', file);
+    // Passa o arquivo para o componente pai
+    onSubmit(file);
   };
 
   return (
     <form id="uploadForm" onSubmit={handleSubmit}>
-      <button className='text-left text-blue-800' type="submit">
+      <label htmlFor="fileInput" className='text-left text-blue-800'>
         Arquivo do documento incorreto:
-        <input type="file" id="fileInput" accept=".pdf,.rtf" />
-      </button>
+      </label>
+      <input
+        type="file"
+        id="fileInput"
+        accept=".pdf,.rtf"
+        required
+      />
+      <button type="submit">Enviar</button>
     </form>
   );
 }

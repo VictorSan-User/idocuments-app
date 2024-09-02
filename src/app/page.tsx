@@ -15,7 +15,7 @@ export default function Home() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('/api/submit-info', {
+      const response = await fetch('/api/get-info', {
         method: 'POST',
         body: formData,
       });
@@ -62,11 +62,11 @@ export default function Home() {
         <h2>Documento Incorreto</h2>
         <form method="post" action="#" encType="multipart/form-data" id="enviar">
           <label className="rounded-xl" htmlFor="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" />
+          <input type="text" id="nome" name="nome" required/>
           <label className="rounded-xl" htmlFor="email">E-mail:</label>
-          <input type="email" id="email" name="email" />
+          <input type="email" id="email" name="email" required/>
         </form>
-          <UploadForm/>
+          <UploadForm onSubmit={handleSubmit}/>
         <form>
           <label className="rounded-xl" htmlFor="categoria">Categoria:</label>
           <select name="categoria" id="categoria">
