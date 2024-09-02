@@ -15,7 +15,7 @@ export default function Home() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('/api/documentos', {
+      const response = await fetch('/api/submit-info', {
         method: 'POST',
         body: formData,
       });
@@ -35,7 +35,7 @@ export default function Home() {
   };
   return (
     <main className="flex flex-col items-center justify-center">
-      <header className='bg-blue-800' id="topo">
+      <title>iDocumentos</title><header className='bg-blue-800' id="topo">
         <div id="topo_box">
           <div id="titulo">
             <header className="w-full p-4">
@@ -61,14 +61,14 @@ export default function Home() {
       <section id="conteudo">
         <h2>Documento Incorreto</h2>
         <form method="post" action="#" encType="multipart/form-data" id="enviar">
-          <label htmlFor="nome">Nome:</label>
+          <label className="rounded-xl" htmlFor="nome">Nome:</label>
           <input type="text" id="nome" name="nome" />
-          <label htmlFor="email">E-mail:</label>
+          <label className="rounded-xl" htmlFor="email">E-mail:</label>
           <input type="email" id="email" name="email" />
         </form>
           <UploadForm/>
         <form>
-          <label htmlFor="categoria">Categoria:</label>
+          <label className="rounded-xl" htmlFor="categoria">Categoria:</label>
           <select name="categoria" id="categoria">
             <option value="1">Perguntas</option>
             <option value="2">Reclamações</option>
