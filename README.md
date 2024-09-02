@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+iDocumentos App
+O iDocumentos App é uma aplicação para notificação de documentos incorretos. A aplicação permite que os usuários enviem informações sobre documentos com erros e para que administradores possam visualizar esses documentos em uma página de administração.
 
-## Getting Started
+Tecnologias Utilizadas
+React: Biblioteca JavaScript para construir interfaces de usuário.
+Next.js: Framework React para renderização do lado do servidor e geração de sites estáticos.
+TypeScript: Superset do JavaScript que adiciona tipagem estática.
+Tailwind CSS: Framework de utilitários CSS.
 
-First, run the development server:
+Pré-requisitos
+Node.js
+JavaScript
 
-```bash
+Configuração
+1. Clonar o Repositório
+bash
+Copiar código
+git clone https://github.com/VictorSan-User/idocuments-app
+cd idocumentos-app
+2. Instalar Dependências do Frontend
+Certifique-se de ter o Node.js instalado. Em seguida, execute:
+
+
+npm install
+
+3. Configurar o Back-end PHP
+Navegue para o diretório onde está o código PHP.
+
+Instale as dependências do PHP com Composer (se houver um composer.json):
+
+composer install
+
+Configure seu servidor PHP para servir o projeto. Certifique-se de que o servidor está configurado para lidar com arquivos PHP e está acessível através do endereço especificado no código.
+
+5. Iniciar o Servidor de Desenvolvimento
+Para iniciar o servidor de desenvolvimento do Next.js, execute:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra o navegador e acesse http://localhost:3000 para visualizar a aplicação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+6. Adicionar o Favicon
+Certifique-se de que o arquivo favicon.ico esteja localizado na pasta public do projeto. O favicon deve ser referenciado no componente Head do Next.js.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Uso
+Página Inicial (Home)
+Na página inicial, os usuários podem enviar documentos incorretos usando um formulário. As informações são enviadas para o back-end PHP para processamento.
 
-## Learn More
+Página de Administração (AdminPage)
+A página de administração exibe uma lista de documentos enviados. Os administradores podem visualizar e gerenciar essas informações.
 
-To learn more about Next.js, take a look at the following resources:
+Contribuição
+Se desejar contribuir para o projeto, siga estas etapas:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Faça um fork do repositório.
+Crie uma branch para sua alteração (git checkout -b minha-alteracao).
+Faça as alterações necessárias e teste-as.
+Faça commit das suas alterações (git commit -am 'Adiciona nova funcionalidade').
+Faça push para a branch (git push origin minha-alteracao).
+Crie um pull request para revisão.
+Licença
+Este projeto está licenciado sob a Licença MIT.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contato
+Para mais informações, entre em contato com:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Nome: Victor
+E-mail: victorhenriquesan@outlook.com
